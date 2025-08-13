@@ -44,7 +44,7 @@ def main():
             for shot in shots:
                 if shot.collisions(rock):
                     shot.kill()
-                    rock.kill()
+                    rock.split()
 
 
             
