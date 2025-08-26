@@ -18,3 +18,7 @@ env/
 
 # Testing output or temporary files
 *.log
+
+# Project-specific
+.python-version
+uv.lock
