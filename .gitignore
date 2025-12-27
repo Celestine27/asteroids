@@ -22,3 +22,4 @@ env/
 # Project-specific
 .python-version
 uv.lock
+game_state.jsonl

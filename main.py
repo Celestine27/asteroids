@@ -5,6 +5,7 @@ from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
+from logger import log_event, log_state
 
 
 
@@ -38,11 +39,13 @@ def main():
 
         for rock in asteroid:
             if player.collisions(rock):
+                log_event("Player_hit")
                 print("Game over!")
                 sys.exit()
 
             for shot in shots:
                 if shot.collisions(rock):
+                    log_event("asteroid_shot")
                     shot.kill()
                     rock.split()
 
